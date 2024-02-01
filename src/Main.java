@@ -25,9 +25,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingresa tu nombre");
         String name = sc.nextLine();
-        System.out.println();
-
-        while(true) {
+        while (name.isEmpty()){
+            System.out.println("Por favor, ingresa un nombre válido");
+            name = sc.nextLine();
+        }
+        while (true) {
             int guess = player.makeGuess();
             player.setGuesses(guess);
             if (guess > targetNumber) {
@@ -44,7 +46,6 @@ public class Main {
                 System.out.println("Tu historial de suposición fue: " + player.getGuesses());
                 return true;
             }
-
             guess = cpu.makeGuess();
             cpu.setGuesses(guess);
             System.out.println("Computadora: " + guess);
