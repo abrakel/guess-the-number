@@ -9,7 +9,11 @@ class ComputerPlayer extends Player{
         this.random = new Random();
     }
 
+    public void setRandom(Random random){
+        this.random = random;
+    }
+
     public int makeGuess(){
-        return this.guess = random.nextInt((100 - 1 +1)+1);
+        return random.nextInt((100 - 1 +1)+1);
     }
 }

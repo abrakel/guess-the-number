@@ -11,16 +11,18 @@ public class Main {
 
     //Constructor de la clase
     public Main() {
-        random = new Random();
-        targetNumber = randomNumber(1, 100);
+        this.random = new Random();
+        this.targetNumber = randomNumber();
     }
 
     //Métodos
     // genera el nro random
-    public int randomNumber(int min, int max) {
-        return random.nextInt(max - min + 1) + min;
+    public int randomNumber() {
+        return random.nextInt((100 - 1 +1)+1);
     }
-
+    public void setRandom(Random random){
+        this.random = random;
+    }
     private boolean checkGuess(Player player, Player cpu) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingresa tu nombre");
