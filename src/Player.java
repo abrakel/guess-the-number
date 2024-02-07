@@ -10,7 +10,7 @@ abstract class Player{
     //Atributos
     private String name;
     protected List <Integer> guesses;
-    int guess = 0;
+    int guess;
 
     //    Constructor
     public Player(){

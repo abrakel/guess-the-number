@@ -39,4 +39,11 @@ class ComputerPlayerTest extends Player {
 
         assertEquals(40, guess);
     }
+
+    @RepeatedTest(5)
+    void testCpuRandom(){
+        ComputerPlayer cpu = new ComputerPlayer();
+        int randomCpu = cpu.makeGuess();
+        assertTrue(randomCpu >= 1 && randomCpu <= 100);
+    }
 }
